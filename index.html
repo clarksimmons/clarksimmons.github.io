@@ -1,66 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbed Wire Quotation System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刺绳报价系统</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Barbed Wire Quotation Calculator</h1>
-        <p class="note">Note: Calculations assume a standard <strong>100mm (10cm)</strong> barb spacing. Weight proportions are estimated.</p>
+  <div class="container">
+      <h1>刺绳价格计算器</h1>
+      <p class="note">注意：计算基于标准 <strong>100mm (10cm)</strong> 刺距。重量比例为估算值。</p>
 
-        <div class="input-section">
-            <h2>Input Parameters</h2>
-            <div class="input-group">
-                <label for="mainWireDia">Main Wire Diameter (mm):</label>
-                <input type="number" id="mainWireDia" step="0.1" placeholder="e.g., 2.5">
-            </div>
-            <div class="input-group">
-                <label for="barbWireDia">Barb Wire Diameter (mm):</label>
-                <input type="number" id="barbWireDia" step="0.1" placeholder="e.g., 2.0">
-            </div>
-            <div class="input-group">
-                <label for="mainWirePrice">Main Wire Price (RMB/ton):</label>
-                <input type="number" id="mainWirePrice" step="10" placeholder="e.g., 4500">
-            </div>
-            <div class="input-group">
-                <label for="barbWirePrice">Barb Wire Price (RMB/ton):</label>
-                <input type="number" id="barbWirePrice" step="10" placeholder="e.g., 4600">
-            </div>
-             <div class="input-group">
-                <label for="processingFee">Processing Fee (RMB/ton):</label>
-                <input type="number" id="processingFee" step="10" value="300">
-            </div>
-        </div>
+      <div class="input-section">
+          <h2>输入参数</h2>
+          <div class="input-group">
+              <label for="mainWireDia">主线直径 (mm):</label>
+              <input type="number" id="mainWireDia" step="0.1" placeholder="例如: 2.5">
+          </div>
+          <div class="input-group">
+              <label for="barbWireDia">刺线直径 (mm):</label>
+              <input type="number" id="barbWireDia" step="0.1" placeholder="例如: 2.0">
+          </div>
+          <div class="input-group">
+              <label for="mainWirePrice">主线价格 (元/吨):</label>
+              <input type="number" id="mainWirePrice" step="10" placeholder="例如: 4500">
+          </div>
+          <div class="input-group">
+              <label for="barbWirePrice">刺线价格 (元/吨):</label>
+              <input type="number" id="barbWirePrice" step="10" placeholder="例如: 4600">
+          </div>
+           <div class="input-group">
+              <label for="processingFee">加工费 (元/吨):</label>
+              <input type="number" id="processingFee" step="10" value="300">
+          </div>
+      </div>
 
-        <div class="output-section">
-            <h2>Calculation Results</h2>
-            <div class="result-group">
-                <label>Specification:</label>
-                <span id="outputSpec">--</span>
-            </div>
-            <div class="result-group">
-                <label>Meters per Kilogram (m/kg):</label>
-                <span id="outputMetersPerKg">--</span>
-            </div>
-             <div class="result-group">
-                <label>Meters per Ton (m/ton):</label>
-                <span id="outputMetersPerTon">--</span>
-            </div>
-            <div class="result-group">
-                <label>Final Price per Ton (RMB/ton):</label>
-                <span id="outputPricePerTon">--</span>
-                <small>(Weighted Material + Processing)</small>
-            </div>
-             <div class="result-group error-message" id="errorMessage" style="display: none;">
-                Specification or required data not found. Check inputs and data table.
-            </div>
-        </div>
-    </div>
+      <div class="output-section">
+          <h2>计算结果</h2>
+          <div class="result-group">
+              <label>规格型号:</label>
+              <span id="outputSpec">--</span>
+          </div>
+          <div class="result-group">
+              <label>每公斤米数 (米/公斤):</label>
+              <span id="outputMetersPerKg">--</span>
+          </div>
+           <div class="result-group">
+              <label>每吨米数 (米/吨):</label>
+              <span id="outputMetersPerTon">--</span>
+          </div>
+          <div class="result-group">
+              <label>最终单价 (元/吨):</label>
+              <span id="outputPricePerTon">--</span>
+              <small>(加权材料成本 + 加工费)</small>
+          </div>
+           <div class="result-group error-message" id="errorMessage" style="display: none;">
+              未找到规格或所需数据。请检查输入和数据表。
+          </div>
+      </div>
+  </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
