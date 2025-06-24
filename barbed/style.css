@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.note {
+    background-color: #eaf2f8;
+    border-left: 4px solid #3498db;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.input-group, .result-group {
+    margin-bottom: 15px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.input-group label, .result-group label {
+    display: inline-block;
+    width: 200px; /* Fixed width for labels */
+    margin-right: 10px;
+    font-weight: bold;
+    color: #555;
+    flex-shrink: 0; /* Prevent label from shrinking */
+}
+
+.input-group input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    flex-grow: 1; /* Allow input to take remaining space */
+    min-width: 100px; /* Minimum width for input */
+}
+
+.result-group span {
+    font-weight: bold;
+    color: #3498db; /* Highlight results */
+    background-color: #f8f9f9;
+    padding: 5px 8px;
+    border-radius: 3px;
+    min-width: 80px; /* Give space for the value */
+    display: inline-block; /* Needed for padding/background */
+    text-align: right;
+}
+
+.result-group small {
+    margin-left: 10px;
+    font-size: 0.85em;
+    color: #777;
+}
+
+.error-message {
+    color: #e74c3c; /* Red for errors */
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fdedec;
+    border: 1px solid #f5b7b1;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%; /* Take full width */
+    justify-content: center; /* Center text in flex container */
+}
+
+/* Basic responsiveness */
+@media (max-width: 500px) {
+    .input-group label, .result-group label {
+        width: 100%; /* Stack label above input */
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    .input-group input[type="number"] {
+        width: 100%;
+    }
+     .result-group span {
+        margin-left: 0; /* Remove left margin when stacked */
+        width: auto; /* Adjust width */
+        text-align: left;
+    }
+     .result-group small {
+        margin-left: 0;
+        display: block; /* Put small text on new line */
+        margin-top: 3px;
+    }
+}

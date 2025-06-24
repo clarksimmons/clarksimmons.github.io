@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刺绳报价系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <h1>刺绳价格计算器</h1>
+      <p class="note">注意：计算基于标准 <strong>100mm (10cm)</strong> 刺距。重量比例为估算值。</p>
+
+      <div class="input-section">
+          <h2>输入参数</h2>
+          <div class="input-group">
+              <label for="mainWireDia">主线直径 (mm):</label>
+              <input type="number" id="mainWireDia" step="0.1" placeholder="例如: 2.5">
+          </div>
+          <div class="input-group">
+              <label for="barbWireDia">刺线直径 (mm):</label>
+              <input type="number" id="barbWireDia" step="0.1" placeholder="例如: 2.0">
+          </div>
+          <div class="input-group">
+              <label for="mainWirePrice">主线价格 (元/吨):</label>
+              <input type="number" id="mainWirePrice" step="10" placeholder="例如: 4500">
+          </div>
+          <div class="input-group">
+              <label for="barbWirePrice">刺线价格 (元/吨):</label>
+              <input type="number" id="barbWirePrice" step="10" placeholder="例如: 4600">
+          </div>
+           <div class="input-group">
+              <label for="processingFee">加工费 (元/吨):</label>
+              <input type="number" id="processingFee" step="10" value="300">
+          </div>
+      </div>
+
+      <div class="output-section">
+          <h2>计算结果</h2>
+          <div class="result-group">
+              <label>规格型号:</label>
+              <span id="outputSpec">--</span>
+          </div>
+          <div class="result-group">
+              <label>每公斤米数 (米/公斤):</label>
+              <span id="outputMetersPerKg">--</span>
+          </div>
+           <div class="result-group">
+              <label>每吨米数 (米/吨):</label>
+              <span id="outputMetersPerTon">--</span>
+          </div>
+          <div class="result-group">
+              <label>最终单价 (元/吨):</label>
+              <span id="outputPricePerTon">--</span>
+              <small>(加权材料成本 + 加工费)</small>
+          </div>
+           <div class="result-group error-message" id="errorMessage" style="display: none;">
+              未找到规格或所需数据。请检查输入和数据表。
+          </div>
+      </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
