@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbed Wire Quotation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Barbed Wire Quotation Calculator</h1>
+        <p class="note">Note: Calculations assume a standard <strong>100mm (10cm)</strong> barb spacing. Weight proportions are estimated.</p>
+
+        <div class="input-section">
+            <h2>Input Parameters</h2>
+            <div class="input-group">
+                <label for="mainWireDia">Main Wire Diameter (mm):</label>
+                <input type="number" id="mainWireDia" step="0.1" placeholder="e.g., 2.5">
+            </div>
+            <div class="input-group">
+                <label for="barbWireDia">Barb Wire Diameter (mm):</label>
+                <input type="number" id="barbWireDia" step="0.1" placeholder="e.g., 2.0">
+            </div>
+            <div class="input-group">
+                <label for="mainWirePrice">Main Wire Price (RMB/ton):</label>
+                <input type="number" id="mainWirePrice" step="10" placeholder="e.g., 4500">
+            </div>
+            <div class="input-group">
+                <label for="barbWirePrice">Barb Wire Price (RMB/ton):</label>
+                <input type="number" id="barbWirePrice" step="10" placeholder="e.g., 4600">
+            </div>
+             <div class="input-group">
+                <label for="processingFee">Processing Fee (RMB/ton):</label>
+                <input type="number" id="processingFee" step="10" value="300">
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Calculation Results</h2>
+            <div class="result-group">
+                <label>Specification:</label>
+                <span id="outputSpec">--</span>
+            </div>
+            <div class="result-group">
+                <label>Meters per Kilogram (m/kg):</label>
+                <span id="outputMetersPerKg">--</span>
+            </div>
+             <div class="result-group">
+                <label>Meters per Ton (m/ton):</label>
+                <span id="outputMetersPerTon">--</span>
+            </div>
+            <div class="result-group">
+                <label>Final Price per Ton (RMB/ton):</label>
+                <span id="outputPricePerTon">--</span>
+                <small>(Weighted Material + Processing)</small>
+            </div>
+             <div class="result-group error-message" id="errorMessage" style="display: none;">
+                Specification or required data not found. Check inputs and data table.
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
